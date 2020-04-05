@@ -412,7 +412,7 @@ The OAuth2 scopes should be used according to the ones defined in [the OAuth2 sc
 ```java
 public static final String OAUTH2_SCOPE = "https://www.googleapis.com/auth/calendar.readonly";
 ```
-
+<img src="<img src="dinosaur.jpg">">
 Make sure to pass this value into the scope parameter:
 
 ```java
