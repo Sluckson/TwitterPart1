@@ -1,5 +1,89 @@
 # RestClientTemplate [![Build Status](https://travis-ci.org/codepath/android-rest-client-template.svg?branch=master)](https://travis-ci.org/codepath/android-rest-client-template)
 
+<img src="https://github.com/Sluckson/TwitterPart1/blob/master/20200405_004724.gif">
+
+# Projet 2 - * Twitter *
+
+** Nom de votre application ** est une application Android qui permet à un utilisateur de consulter sa chronologie Twitter et de publier un nouveau tweet. L'application utilise [Twitter REST API] (https://dev.twitter.com/rest/public).
+
+Temps passé: ** X ** heures passées au total
+
+## Histoires d'utilisateurs
+
+La fonctionnalité ** requise ** suivante est terminée:
+
+- [X] L'utilisateur peut ** composer et publier un nouveau tweet **
+  - [X] L'utilisateur peut cliquer sur une icône "Composer" dans la barre d'actions en haut à droite
+  - [X] L'utilisateur peut ensuite entrer un nouveau tweet et le publier sur Twitter
+  - [X] L'utilisateur est ramené à la chronologie de la maison avec ** nouveau tweet visible ** dans la chronologie
+  - [X] Le tweet nouvellement créé doit être inséré manuellement dans la chronologie et ne pas compter sur une actualisation complète
+  - [-] L'utilisateur peut ** voir un compteur avec le nombre total de caractères restant pour le tweet ** sur la page de composition du tweet
+
+Les fonctionnalités ** facultatives ** suivantes sont implémentées:
+
+- [-] L'utilisateur utilise ** des couleurs et des styles "de marque Twitter" **
+- [X] L'utilisateur peut ** cliquer sur un lien dans le corps d'un tweet ** dans la vue détaillée du tweet. Le clic lancera le navigateur Web avec la page appropriée ouverte.
+- [X] L'utilisateur peut ** sélectionner "répondre" dans la vue détaillée pour répondre à un tweet **
+  - [] L'utilisateur qui a écrit le tweet d'origine est ** automatiquement "@" a répondu dans la composition **
+- [-] L'utilisateur peut déplacer l'action "Composer" vers un FloatingActionButton plutôt que sur l'AppBar.
+- [X] La fonctionnalité de composition de tweet est construite à l'aide de la superposition modale
+- [-] Utilisez Parcelable au lieu de Serializable en utilisant la populaire [bibliothèque Parceler] (http://guides.codepath.org/android/Using-Parceler).
+- [X] L'utilisateur peut ** ouvrir l'application Twitter hors ligne et voir les derniers tweets chargés **. Les tweets persistants dans SQLite sont actualisés à chaque lancement d'application. Bien que les «données en direct» soient affichées lorsque l'application peut les obtenir à partir de l'API Twitter, elles sont également enregistrées pour être utilisées en mode hors ligne.
+- [-] Lorsqu'un utilisateur quitte la vue de composition sans publication et qu'il existe du texte, invite à enregistrer ou supprimer le brouillon. S'il est enregistré, le brouillon doit alors être ** conservé sur le disque ** et peut ensuite être repris à partir de la vue de composition.
+- [-] L'utilisateur peut activer l'application pour ** recevoir des intentions implicites ** d'autres applications. Lorsqu'un lien est partagé à partir d'un navigateur Web, il doit pré-remplir le texte et le titre de la page Web lors de la rédaction d'un tweet.
+
+Les fonctionnalités ** bonus ** suivantes sont implémentées:
+
+- [] L'utilisateur peut appuyer sur un tweet pour ** ouvrir une vue détaillée du tweet **
+  - [] L'utilisateur peut ** prendre des actions favorites (et défavorables) ou ré-activer ** sur un tweet
+- [X] Utilisez la bibliothèque d'annotations populaire de ButterKnife pour réduire la vue passe-partout.
+- [] Sur la timeline Twitter, tirez parti de [CoordinatorLayout] (http://guides.codepath.org/android/Handling-Scrolls-with-CoordinatorLayout#ponseing-to-scroll-events) pour appliquer un comportement de défilement qui [masque / montre la barre d'outils] (http://guides.codepath.org/android/Using-the-App-ToolBar#reacting-to-scroll).
+
+Les ** fonctionnalités ** supplémentaires suivantes sont implémentées:
+
+- [] Énumérez tout ce que vous pouvez faire pour améliorer la fonctionnalité de l'application!
+
+## Procédure pas à pas vidéo
+
+Voici une procédure pas à pas d'histoires d'utilisateurs implémentées:
+
+<img src = 'http: //i.imgur.com/link/to/your/gif/file.gif' title = 'Vidéo pas à pas' width = '' alt = 'Vidéo pas à pas' />
+
+GIF créé avec [LiceCap] (http://www.cockos.com/licecap/).
+
+## Remarques
+
+Décrivez tous les défis rencontrés lors de la création de l'application.
+
+## Bibliothèques open source utilisées
+
+- [Android Async HTTP] (https://github.com/codepath/CPAsyncHttpClient) - Demandes HTTP asynchrones simples avec analyse JSON
+- [Glide] (https://github.com/bumptech/glide) - Bibliothèque de chargement et de mise en cache d'images pour Android
+
+## Licence
+
+    Copyright [aaaa] [nom du propriétaire du copyright]
+
+    Sous licence Apache License, Version 2.0 (la "Licence");
+    vous ne pouvez pas utiliser ce fichier sauf en conformité avec la licence.
+    Vous pouvez obtenir une copie de la licence à l'adresse
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Sauf si requis par la loi applicable ou accepté par écrit, le logiciel
+    distribué sous licence est distribué sur une base "en l'état",
+    SANS GARANTIE OU CONDITION DE QUELQUE NATURE QUE CE SOIT, expresse ou implicite.
+    Voir la licence pour la langue spécifique régissant les autorisations et
+    limitations de la licence.
+
+
+
+
+
+
+
+
+
 ## Overview
 
 RestClientTemplate is a skeleton Android project that makes writing Android apps sourced from OAuth JSON REST APIs as easy as possible. This skeleton project
@@ -412,7 +496,6 @@ The OAuth2 scopes should be used according to the ones defined in [the OAuth2 sc
 ```java
 public static final String OAUTH2_SCOPE = "https://www.googleapis.com/auth/calendar.readonly";
 ```
-<img src="https://github.com/Sluckson/TwitterPart1/blob/master/20200405_004724.gif">
 Make sure to pass this value into the scope parameter:
 
 ```java
